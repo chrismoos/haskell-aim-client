@@ -8,7 +8,8 @@ import Network.Curl.Post
 
 import AIM.Client
 
-import Text.XML.HXT.Arrow
+import Text.XML.HXT.Core
+import Text.XML.HXT.XPath.Arrows
 import qualified Data.ByteString.Lazy.Char8 as BS
 import Data.Digest.Pure.SHA
 import Codec.Binary.Base64.String

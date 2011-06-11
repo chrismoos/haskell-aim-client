@@ -14,8 +14,10 @@ import Data.Binary.Put
 import Data.Binary.Get
 import Char
 import Codec.Binary.UTF8.String as BUTF8
-import Text.XML.HXT.Arrow
 import Control.Concurrent
+	
+import Text.XML.HXT.Core
+import Text.XML.HXT.XPath.Arrows	
 	
 import AIM.Boss
 import AIM.Flap

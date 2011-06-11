@@ -12,7 +12,8 @@ import System.Time
 import AIM.Client
 import AIM.OpenAuth
 
-import Text.XML.HXT.Arrow
+import Text.XML.HXT.Core
+import Text.XML.HXT.XPath.Arrows
 import Text.XML.HaXml
 import Text.XML.HaXml.Xtract.Parse
 
@@ -22,9 +23,9 @@ data AIMBossInfo = AIMBossInfo {host :: String, port :: Int, cookie :: String}
 instance Show AIMBossInfo where
 	show x = "Boss Server: " ++ (AIM.Boss.host x) ++ ":" ++ (show (AIM.Boss.port x)) ++ ", Cookie: " ++ (cookie x)
 
-process_resp :: String -> IOSArrow XmlTree String
+process_resp :: String -> IOSArrow b String
 process_resp resp = 
-	readString [(a_validate, "0")] resp >>>
+	readString [(withValidate no)] resp >>>
 	((getXPathTrees "/response/data/host" >>> getChildren >>> getText) <+>
 	(getXPathTrees "/response/data/port" >>> getChildren >>> getText)) <+>
 	(getXPathTrees "/response/data/cookie" >>> getChildren >>> getText) 

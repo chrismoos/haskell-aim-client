@@ -6,7 +6,7 @@ Synopsis:       Very simple AIM client
 Build-Type:     Simple
 
 Executable haim
-  Build-Depends:  base, haskell98, hxt, base64-string >= 0.1, SHA,
+  Build-Depends:  base, haskell98, hxt, hxt-xpath, base64-string >= 0.1, SHA,
                   binary >= 0.5, bytestring >= 0.9.1.4,
                   HaXml, curl, HTTP >= 4000.0.7, network, old-time,
                   utf8-string, mtl
