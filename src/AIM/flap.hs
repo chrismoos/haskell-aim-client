@@ -3,7 +3,7 @@ module AIM.Flap where
 import qualified Data.ByteString.Lazy as BS
 import qualified Data.ByteString.Lazy.Char8 as BSC
 import Data.Word
-import Char
+import Data.Char
 import Data.Binary.Put
 import Data.Binary.Get
 

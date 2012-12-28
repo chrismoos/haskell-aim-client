@@ -12,7 +12,7 @@ import Control.Monad.State
 import Data.Binary
 import Data.Binary.Put
 import Data.Binary.Get
-import Char
+import Data.Char
 import Codec.Binary.UTF8.String as BUTF8
 import Control.Concurrent
 	
